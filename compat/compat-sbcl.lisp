@@ -1,7 +1,7 @@
 (in-package :araneida)
 
 (eval-when (:load-toplevel :execute)
-  (sb-sys:ignore-interrupt SB-UNIX:SIGPIPE))
+  (sb-sys:enable-interrupt SB-UNIX:SIGPIPE :ignore))
 
 (defun getenv (var)
   (sb-ext:posix-getenv var))
