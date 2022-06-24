@@ -1,0 +1,47 @@
+/.cvsignore/1.3/Tue May 25 16:24:03 2004/-kv/Trelease_0_9
+/LICENCE/1.1/Tue Dec 28 18:34:29 1999/-kv/Trelease_0_9
+/LICENCE-diff/1.1/Tue Dec 28 18:34:29 1999/-kv/Trelease_0_9
+/NEWS/1.21/Tue Sep 28 21:30:53 2004/-kv/Trelease_0_9
+/Notes/1.2/Tue Dec 28 18:31:18 1999/-kv/Trelease_0_9
+/README/1.10/Tue Sep 28 21:30:53 2004/-kv/Trelease_0_9
+/TODO/1.22/Fri Dec 19 08:06:57 2003/-kv/Trelease_0_9
+/araneida.asd/1.33/Tue Sep 28 21:30:53 2004/-kv/Trelease_0_9
+/araneida.lisp/1.6/Mon Jan  6 23:20:05 2003/-kv/Trelease_0_9
+/auth.lisp/1.3/Mon Jan  3 18:43:48 2000/-kv/Trelease_0_9
+/client.lisp/1.5/Tue Sep 28 19:01:36 2004/-kv/Trelease_0_9
+/cmucl-macros.lisp/1.2/Mon Jan  6 23:20:05 2003/-kv/Trelease_0_9
+/cmuclsockets.lisp/1.2/Sat May 27 03:08:42 2000/-kv/Trelease_0_9
+/daemon.lisp/1.31/Mon Dec 15 09:31:40 2003/-kv/Trelease_0_9
+/db-sockets.lisp/1.4/Thu Jun  5 01:53:41 2003/-kv/Trelease_0_9
+/define-page.lisp/1.4/Tue Dec 18 05:31:05 2001/-kv/Trelease_0_9
+/defpackage.lisp/1.31/Thu Jun  3 17:34:27 2004/-kv/Trelease_0_9
+/dhttp.lisp/1.2/Tue Dec 28 18:32:36 1999/-kv/Trelease_0_9
+/exports.lisp/1.10/Sun Nov  9 22:15:23 2003/-kv/Trelease_0_9
+/file-request.lisp/1.14/Sun Jan 12 03:40:49 2003/-kv/Trelease_0_9
+/handler.lisp/1.9/Fri Dec 12 18:42:52 2003/-kv/Trelease_0_9
+/html.lisp/1.11/Thu May 20 22:08:36 2004/-kv/Trelease_0_9
+/http-error.lisp/1.2/Mon Dec 29 23:00:49 2003/-kv/Trelease_0_9
+/http-listener-class.lisp/1.4/Tue Dec  2 03:27:01 2003/-kv/Trelease_0_9
+/http-listener.lisp/1.11/Mon May 24 20:19:27 2004/-kv/Trelease_0_9
+/http-server.system/1.1.1.1/Sun Dec 12 13:53:37 1999/-kv/Trelease_0_9
+/https-listener-class.lisp/1.3/Mon Nov 10 04:47:37 2003/-kv/Trelease_0_9
+/macros.lisp/1.1/Wed Jun 27 18:00:17 2001/-kv/Trelease_0_9
+/memoization.lisp/1.3/Mon May 24 20:19:27 2004/-kv/Trelease_0_9
+/pattern-match.lisp/1.5/Tue Dec  2 03:27:03 2003/-kv/Trelease_0_9
+/pmp.lisp/1.2/Sat May 27 00:32:21 2000/-kv/Trelease_0_9
+/redirect-handler.lisp/1.4/Sat Dec 13 02:38:25 2003/-kv/Trelease_0_9
+/request-class.lisp/1.11/Fri Dec 12 18:42:54 2003/-kv/Trelease_0_9
+/request.lisp/1.31/Thu May 20 22:08:36 2004/-kv/Trelease_0_9
+/reverse-proxy-listener-class.lisp/1.1/Mon Nov 10 04:52:16 2003/-kv/Trelease_0_9
+/serve-event-http-listener.lisp/1.9/Fri Oct  1 01:50:55 2004/-kv/Trelease_0_9
+/server-class.lisp/1.3/Sun Nov  9 22:11:28 2003/-kv/Trelease_0_9
+/server.lisp/1.5/Sun Nov  9 22:11:28 2003/-kv/Trelease_0_9
+/socket.lisp/1.1.1.1/Sun Dec 12 13:53:46 1999/-kv/Trelease_0_9
+/static-file-handler.lisp/1.14/Mon May 24 20:19:27 2004/-kv/Trelease_0_9
+/threaded-http-listener.lisp/1.5/Mon May 24 20:19:27 2004/-kv/Trelease_0_9
+/url-class.lisp/1.4/Mon Jul 12 13:58:51 2004/-kv/Trelease_0_9
+/url.lisp/1.14/Mon Jul 12 14:01:23 2004/-kv/Trelease_0_9
+D/compat////
+D/debian////
+D/doc////
+D/utility////

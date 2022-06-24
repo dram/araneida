@@ -1,0 +1,37 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 3.2//EN">
+<html><head>
+<LINK rel="stylesheet" href="/doc/araneida.css">
+<title>Araneida Reference : HTML generation</title>
+</head><body>
+
+<h1>HTML Generation</h1>
+
+<p> We have functions that turn sexps into HTML.  The format of the
+sexp is
+<pre>
+((element-name {:attribute-name attribute-value}*) {contents})
+</pre>
+where element-name is a symbol, attribute-name is a keyword, and
+contents are more elements, or strings.  If there are no attributes,
+the parens around element-name can be omitted.  For example
+<pre>
+(html
+ (head (title "Title"))
+ (body (p "Click here to visit ((a :href "http://www.google.com/") "Google"))))
+</pre>
+
+<p> The functions are HTML (returns a string) and HTML-STREAM (outputs
+directly to a stream).  The latter is much less consy, so to be
+preferred
+
+<p> We also have a pattern-based rewriting system so that you can
+"invent your own tags" (sic), using DEFINE-PATTERNS.  See example 6 in
+<a href="../examples/main.lisp">../examples/main.lisp</a>.  This is
+used in the DEFINE-PAGE macro, which also gives you correct handling of
+conditional GETs for free.
+
+
+
+
+
+

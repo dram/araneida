@@ -1,0 +1,63 @@
+<html><head>
+<LINK rel="stylesheet" href="/doc/araneida.css">
+<title>Araneida Reference : URLs</title>
+</head><body>
+
+<h1>URLs</h1>
+
+URLs are CLOS objects after the pattern of PATHNAMEs in ANSI CL.
+There is theoretically a class per URL scheme, but only HTTP-URL and
+HTTPS-URL are currently defined.  They behave very very similarly
+
+<h2>Creating URLs</h2>
+
+<pre>
+(make-instance 'http-url :host "foo.com" :port "8000" :scheme "HTTP"
+	:path "/bar")
+=> url
+
+(parse-urlstring "http://foo.com:8000/")
+=> url
+
+(merge-url an-existing-url "/relative?url")
+=> url
+</pre>
+
+<h2>Accessors</h2>
+
+<p>url-scheme url-endpoint url-path url-query url-fragment
+
+<p>also url-host url-port ( url-endpoint = url-host ":" url-port )
+
+<p>These also have SETF methods.  The behaviour of (setf url-scheme) 
+is undefined, however, and it will probably go away unless somebody
+suggests a sensible one.
+
+<!--
+** Multi-accessor (not yet implemented)
+
+(multiple-value-bind (h p q) (url-parts myurl :host :port :query)
+  (do stuff))
+-->
+
+<h2>Relative URLs</h2>
+
+Relative URLs are not implemented as objects - if we don't know what
+scheme they have, we don't know how to parse them.  We do have a
+procedure <b>merge-url</b> that merges a base url with a string,
+though, which caters for most uses.
+
+<pre>
+(merge-url url string)
+</pre>
+
+will create and return a new URL from STRING according to the rules
+for creating relative URLs.  Note that this is a complex operation
+which takes a whole RFC to describe, and it's unlikey that we do it
+correctly in weird cases.  Relative URLs with authority components
+containing non-standard hosts are currently known to be broken.
+
+
+
+
+
