@@ -38,7 +38,6 @@
   (let ((socket (sb-bsd-sockets:socket-accept
                  (http-listener-socket listener))))
     (sb-bsd-sockets:socket-make-stream socket :element-type 'base-char
-                                       :name "socket"
                                        :input t :output t :buffering :full)))
 
 (eval-when (:compile-toplevel :load-toplevel)
