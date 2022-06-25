@@ -234,22 +234,21 @@
 
 (defun urlstring-unescape (url-string)
   (do* ((n 0 (+ n 1))
-        (out '()))
-      ((not (< n (length url-string))) (coerce (reverse out) 'string ))
+        (octets (make-array (length url-string)
+			    :element-type '(unsigned-byte 8) :fill-pointer 0)))
+       ((>= n (length url-string)) (sb-ext:octets-to-string octets :external-format :utf-8))
     (let ((c (elt url-string n)))
-      (setf out 
-            (cond ((eql c #\%)
-                   (progn (setf n (+ 2 n))
-                          (cons (code-char
-				 (or (parse-integer
-				      url-string :start (- n 1)
-				      :end (+ n 1)
-				      :junk-allowed t
-				      :radix 16) 32))
-                                out)))
-                  ((eql c #\+)
-                   (cons #\Space out))
-                  (t (cons c out)))))))
+      (cond ((eql c #\%)
+             (setf n (+ 2 n))
+             (vector-push (or (parse-integer url-string :start (- n 1)
+							:end (+ n 1)
+							:junk-allowed t
+							:radix 16)
+			      32)
+                          octets))
+            ((eql c #\+)
+             (vector-push 32 octets))
+            (t (vector-push (char-code c) octets))))))
 
 
 ;;; This escapes URIs according to the generic URI syntax described in 
