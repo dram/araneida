@@ -59,7 +59,7 @@
     (sb-thread:make-thread thunk))
   
   (defun host-thread-alivep (pid)
-    (zerop (sb-unix:unix-kill pid 0)))
+    (sb-thread:thread-alive-p pid))
   
   (defun host-thread-kill (pid)
     (sb-thread:terminate-thread pid)))
